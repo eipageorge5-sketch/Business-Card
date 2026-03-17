@@ -1,0 +1,224 @@
+/* Reset default browser styles */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Animated gradient background */
+body{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    min-height:100vh;
+    padding:20px;
+    background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364, #1a2a3a);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    color:#333;
+}
+
+/* Gradient animation keyframes */
+@keyframes gradientBG {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+/* Business card container */
+.business-card{
+    background:#ffffff;
+    width:320px;
+    max-width:90%;
+    text-align:center;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 8px 25px rgba(0,0,0,0.2);
+    margin-bottom:20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Card hover effect */
+.business-card:hover{
+    transform: translateY(-5px);
+    box-shadow:0 12px 35px rgba(0,0,0,0.3);
+}
+
+/* Profile image */
+.business-card img{
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    object-fit:cover;
+    margin-bottom:15px;
+    border:4px solid #2c5364;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Profile hover effect */
+.business-card img:hover{
+    transform: scale(1.1) rotate(3deg);
+    box-shadow:0 4px 15px rgba(44,83,100,0.7);
+}
+
+/* Name and titles */
+.full-name{
+    font-size:22px;
+    font-weight:bold;
+    color:#2c5364;
+    margin-bottom:5px;
+}
+.designation{
+    font-size:16px;
+    color:#555;
+    margin-bottom:5px;
+}
+.company{
+    font-size:15px;
+    color:#777;
+    margin-bottom:15px;
+}
+
+/* Divider */
+hr{
+    margin:15px 0;
+    border:none;
+    height:1px;
+    background:#ddd;
+}
+
+/* Contact info */
+.business-card p{
+    margin:5px 0;
+    font-size:14px;
+}
+
+/* Portfolio button with glowing hover effect */
+.portfolio-link{
+    display:inline-block;
+    margin-top:10px;
+    padding:10px 20px;
+    background:#2c5364;
+    color:white;
+    text-decoration:none;
+    border-radius:25px;
+    font-weight:bold;
+    font-size:15px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+/* Inner glow effect */
+.portfolio-link::before{
+    content:'';
+    position:absolute;
+    top:0;
+    left:-50%;
+    width:200%;
+    height:100%;
+    background: linear-gradient(120deg, #4facfe, #00f2fe, #2c5364, #1a333f);
+    transition: all 0.5s ease;
+    filter: blur(15px);
+    opacity:0;
+    z-index:-1;
+}
+
+/* Hover glow animation */
+.portfolio-link:hover::before{
+    left:0;
+    opacity:1;
+}
+
+/* Button hover effect */
+.portfolio-link:hover{
+    background:#1a333f;
+    box-shadow: 0 0 15px #2c5364, 0 0 25px #4facfe, 0 0 35px #00f2fe;
+    transform: translateY(-3px);
+}
+
+/* Social media container */
+.social-media{
+    background:white;
+    width:320px;
+    max-width:90%;
+    padding:20px;
+    text-align:center;
+    border-radius:15px;
+    box-shadow:0 8px 25px rgba(0,0,0,0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Hover effect on social card */
+.social-media:hover{
+    transform: translateY(-5px);
+    box-shadow:0 12px 35px rgba(0,0,0,0.3);
+}
+
+/* Social title */
+.social-media h2{
+    margin-bottom:15px;
+    color:#2c5364;
+}
+
+/* Social links with glow effect */
+.social-media a{
+    display:inline-block;
+    margin:5px;
+    padding:10px 20px;
+    background:#2c5364;
+    color:white;
+    text-decoration:none;
+    border-radius:25px;
+    font-size:14px;
+    font-weight:bold;
+    transition:0.3s, box-shadow 0.3s, transform 0.3s;
+    position: relative;
+    overflow: hidden;
+    z-index:1;
+}
+
+/* Inner glow for social links */
+.social-media a::before{
+    content:'';
+    position:absolute;
+    top:0;
+    left:-50%;
+    width:200%;
+    height:100%;
+    background: linear-gradient(120deg, #4facfe, #00f2fe, #2c5364, #1a333f);
+    filter: blur(15px);
+    opacity:0;
+    transition: all 0.5s ease;
+    z-index:-1;
+}
+
+/* Hover animation for social links */
+.social-media a:hover::before{
+    left:0;
+    opacity:1;
+}
+
+/* Hover effect on social links */
+.social-media a:hover{
+    background:#1a333f;
+    box-shadow:0 0 15px #2c5364, 0 0 25px #4facfe, 0 0 35px #00f2fe;
+    transform: translateY(-2px);
+}
+
+/* Responsive adjustments */
+@media screen and (max-width:400px){
+    .business-card, .social-media{
+        width:90%;
+        padding:20px;
+    }
+    .full-name{
+        font-size:20px;
+    }
+    .designation, .company{
+        font-size:14px;
+    }
+}
