@@ -202,6 +202,30 @@ hr{
     opacity:1;
 }
 
+.skills-section h3 {
+    font-size: 1.2rem;
+    margin-top: 20px;
+    color: #007bff;
+}
+
+.skills-tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.skills-tags span {
+    background: rgba(0, 123, 255, 0.1);
+    color: #007bff;
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    border: 1px solid #007bff;
+}
+
 /* Hover effect on social links */
 .social-media a:hover{
     background:#1a333f;
